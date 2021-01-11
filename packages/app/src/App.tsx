@@ -6,10 +6,6 @@ import {
   SidebarPage,
   createRouteRef,
   githubAuthApiRef,
-  googleAuthApiRef,
-  gitlabAuthApiRef,
-  auth0AuthApiRef,
-  microsoftAuthApiRef,
   SignInPage
 } from '@backstage/core';
 import { apis } from './apis';
@@ -30,27 +26,7 @@ const authProviders = [
     title: 'GitHub',
     message: 'Login via Github',
     apiRef: githubAuthApiRef,
-  },  {
-    id: 'google-auth-provider',
-    title: 'Google',
-    message: 'Login via Google',
-    apiRef: googleAuthApiRef,
-  },  {
-    id: 'gitlab-auth-provider',
-    title: 'Gitlab',
-    message: 'Login via Gitlab',
-    apiRef: gitlabAuthApiRef,
-  },  {
-    id: 'auth0-auth-provider',
-    title: 'Auth0',
-    message: 'Login via Auth0',
-    apiRef: auth0AuthApiRef,
-  },{
-    id: 'microsoft-auth-provider',
-    title: 'Microsoft',
-    message: 'Login via Microsoft',
-    apiRef: microsoftAuthApiRef,
-  },
+  }
 ]
 
 
