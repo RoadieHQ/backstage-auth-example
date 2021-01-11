@@ -7,6 +7,6 @@ Main branch contains the following providers:
 * Google Cloud
 * Auth0
 
-For individual providers only, see their respective branches.
+For individual providers and their setup, see their respective branches.
 
 See documentation in Backstage documentation page in: https://backstage.io/docs/tutorials/quickstart-app-auth
