@@ -7,7 +7,7 @@ Main branch contains the following providers:
 * Google Cloud
 * Auth0
 
-For individual providers and their setup, see their respective branches.
+For individual providers and images of their setup, see their respective branches.
 
 
 
