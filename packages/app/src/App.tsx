@@ -26,30 +26,10 @@ import { EntityPage } from './components/catalog/EntityPage';
 
 const authProviders = [
   {
-    id: 'github-auth-provider',
-    title: 'GitHub',
-    message: 'Login via Github',
-    apiRef: githubAuthApiRef,
-  },  {
-    id: 'google-auth-provider',
-    title: 'Google',
-    message: 'Login via Google',
-    apiRef: googleAuthApiRef,
-  },  {
     id: 'gitlab-auth-provider',
     title: 'Gitlab',
     message: 'Login via Gitlab',
     apiRef: gitlabAuthApiRef,
-  },  {
-    id: 'auth0-auth-provider',
-    title: 'Auth0',
-    message: 'Login via Auth0',
-    apiRef: auth0AuthApiRef,
-  },{
-    id: 'microsoft-auth-provider',
-    title: 'Microsoft',
-    message: 'Login via Microsoft',
-    apiRef: microsoftAuthApiRef,
   },
 ]
 

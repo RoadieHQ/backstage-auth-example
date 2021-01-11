@@ -54,40 +54,7 @@ auth:
           $env: AUTH_GITLAB_CLIENT_ID
         clientSecret:
           $env: AUTH_GITLAB_CLIENT_SECRET
-        audience : https://gitlab.com
-    microsoft:
-      development:
-        clientId:
-          $env: AUTH_MICROSOFT_CLIENT_ID
-        clientSecret:
-          $env: AUTH_MICROSOFT_CLIENT_SECRET
-        tenantId:
-          $env: AUTH_MICROSOFT_TENANT_ID
-    google:
-      development:
-        clientId:
-          $env: AUTH_GOOGLE_CLIENT_ID
-        clientSecret:
-          $env: AUTH_GOOGLE_CLIENT_SECRET
-    auth0:
-      development:
-        clientId:
-          $env: AUTH_AUTH0_CLIENT_ID
-        clientSecret:
-          $env: AUTH_AUTH0_CLIENT_SECRET
-        domain:
-          $env: AUTH_AUTH0_DOMAIN_ID
-    github:
-      development:
-        clientId:
-         $env: AUTH_GITHUB_CLIENT_ID
-        clientSecret:
-         $env: AUTH_GITHUB_CLIENT_SECRET
-        ## uncomment the following three lines if using enterprise
-        # enterpriseInstanceUrl:
-        #  $env: AUTH_GITHUB_ENTERPRISE_INSTANCE_URL
-
-
+        audience : https://gitlab.com # Or your private Gitlab server
 
 scaffolder:
   github:
