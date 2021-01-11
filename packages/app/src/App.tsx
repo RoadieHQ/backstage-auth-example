@@ -1,0 +1,116 @@
+import React from 'react';
+import {
+  createApp,
+  AlertDisplay,
+  OAuthRequestDialog,
+  SidebarPage,
+  createRouteRef,
+  githubAuthApiRef,
+  googleAuthApiRef,
+  gitlabAuthApiRef,
+  auth0AuthApiRef,
+  microsoftAuthApiRef,
+  SignInPage
+} from '@backstage/core';
+import { apis } from './apis';
+import * as plugins from './plugins';
+import { AppSidebar } from './sidebar';
+import { Route, Routes, Navigate } from 'react-router';
+import { Router as CatalogRouter } from '@backstage/plugin-catalog';
+import { Router as DocsRouter } from '@backstage/plugin-techdocs';
+import { Router as ImportComponentRouter } from '@backstage/plugin-catalog-import';
+import { Router as TechRadarRouter } from '@backstage/plugin-tech-radar';
+import { SearchPage as SearchRouter } from '@backstage/plugin-search';
+
+import { EntityPage } from './components/catalog/EntityPage';
+
+const authProviders = [
+  {
+    id: 'github-auth-provider',
+    title: 'GitHub',
+    message: 'Login via Github',
+    apiRef: githubAuthApiRef,
+  },  {
+    id: 'google-auth-provider',
+    title: 'Google',
+    message: 'Login via Google',
+    apiRef: googleAuthApiRef,
+  },  {
+    id: 'gitlab-auth-provider',
+    title: 'Gitlab',
+    message: 'Login via Gitlab',
+    apiRef: gitlabAuthApiRef,
+  },  {
+    id: 'auth0-auth-provider',
+    title: 'Auth0',
+    message: 'Login via Auth0',
+    apiRef: auth0AuthApiRef,
+  },{
+    id: 'microsoft-auth-provider',
+    title: 'Microsoft',
+    message: 'Login via Microsoft',
+    apiRef: microsoftAuthApiRef,
+  },
+]
+
+
+const app = createApp({
+  apis,
+  plugins: Object.values(plugins),
+  components: {
+    SignInPage: props => {
+      return (
+          <SignInPage
+              {...props}
+              providers={authProviders}
+              align="center"
+          />
+      );
+    },
+  },
+});
+
+const AppProvider = app.getProvider();
+const AppRouter = app.getRouter();
+const deprecatedAppRoutes = app.getRoutes();
+
+const catalogRouteRef = createRouteRef({
+  path: '/catalog',
+  title: 'Service Catalog',
+});
+
+
+const App = () => (
+  <AppProvider>
+    <AlertDisplay />
+    <OAuthRequestDialog />
+    <AppRouter>
+      <SidebarPage>
+        <AppSidebar />
+        <Routes>
+          <Navigate key="/" to="/catalog" />
+          <Route
+            path="/catalog/*"
+            element={<CatalogRouter EntityPage={EntityPage} />}
+          />
+          <Route path="/docs/*" element={<DocsRouter />} />
+          <Route
+            path="/tech-radar"
+            element={<TechRadarRouter width={1500} height={800} />}
+          />
+          <Route
+            path="/catalog-import"
+            element={<ImportComponentRouter catalogRouteRef={catalogRouteRef} />}
+          />
+          <Route
+            path="/search"
+            element={<SearchRouter/>}
+          />
+          {deprecatedAppRoutes}
+        </Routes>
+      </SidebarPage>
+    </AppRouter>
+  </AppProvider>
+);
+
+export default App;
