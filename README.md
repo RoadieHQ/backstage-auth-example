@@ -1,15 +1,13 @@
 # Demo Backstage application with Auth providers
 
-Main branch contains the following providers:
-* Github
-* Gitlab
-* Microsoft Azure
-* Google Cloud
-* Auth0
-
 For individual providers and images of their setup, see their respective branches.
+* [Auth0](https://github.com/RoadieHQ/backstage-auth-example/tree/auth0)
+* [Github](https://github.com/RoadieHQ/backstage-auth-example/tree/github)
+* [Gitlab](https://github.com/RoadieHQ/backstage-auth-example/tree/gitlab)
+* [Google Cloud](https://github.com/RoadieHQ/backstage-auth-example/tree/google)
+* [Microsoft Azure](https://github.com/RoadieHQ/backstage-auth-example/tree/microsoft)
 
-
+Main branch contains a unified setup for all providers mentioned above.
 
 ## Tutorial
 
