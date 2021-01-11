@@ -14,6 +14,7 @@ For individual providers and their setup, see their respective branches.
 ## Tutorial
 
 ###### January 8th 2021 - @backstage/create-app - v0.4.5
+###### Modified from documentation published in https://backstage.io/docs/tutorials/quickstart-app-auth
 
 <br />
 
