@@ -5,10 +5,6 @@ import {
   OAuthRequestDialog,
   SidebarPage,
   createRouteRef,
-  githubAuthApiRef,
-  googleAuthApiRef,
-  gitlabAuthApiRef,
-  auth0AuthApiRef,
   microsoftAuthApiRef,
   SignInPage
 } from '@backstage/core';
