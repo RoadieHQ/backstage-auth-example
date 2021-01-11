@@ -18,6 +18,6 @@ Expose the following scopes:
 * profile (Allows read-only access to the user's personal information using OpenID Connect)
 * email (Allows read-only access to the user's primary email address using OpenID Connect)
 
-
+![Gitlab Auth Setup](docs/static/gitlab_auth_setup.png)
 
 See more documentation in Backstage documentation page in: https://backstage.io/docs/tutorials/quickstart-app-auth
