@@ -4,9 +4,9 @@ metadata:
   name: auth-backstage
   title: Auth Backstage
   description: An example of a Backstage application.
-  # Example for optional annotations
-  # annotations:
-    # github.com/project-slug: backstage/backstage
+  annotations:
+    github.com/project-slug: RoadieHQ/backstage-auth-example
+    # Example for optional annotations
     # backstage.io/techdocs-ref: github:https://github.com/backstage/backstage.git
 spec:
   type: website
