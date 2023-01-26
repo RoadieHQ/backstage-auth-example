@@ -2,6 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: auth-backstage
+  title: Auth Backstage
   description: An example of a Backstage application.
   # Example for optional annotations
   # annotations:
