@@ -13,7 +13,7 @@
     "@backstage/plugin-catalog-import": "^0.3.3",
     "@backstage/plugin-scaffolder": "^0.3.6",
     "@backstage/plugin-techdocs": "^0.5.2",
-    "@backstage/catalog-model": "^0.6.0",
+    "@backstage/catalog-model": "^1.2.0",
     "@backstage/plugin-circleci": "^0.2.5",
     "@backstage/plugin-tech-radar": "^0.3.2",
     "@backstage/plugin-github-actions": "^0.2.6",
