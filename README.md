@@ -12,7 +12,7 @@ Main branch contains a unified setup for all providers mentioned above.
 ## Tutorial
 
 ###### January 8th 2021 - @backstage/create-app - v0.4.5
-###### Modified from documentation published in https://backstage.io/docs/tutorials/quickstart-app-auth
+###### Modified from documentation published in https://backstage.io/docs/auth/
 
 <br />
 
